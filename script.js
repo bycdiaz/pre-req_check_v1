@@ -1,5 +1,7 @@
 let csvData;
 let csvHeader;
+let userInput;
+const button = document.querySelector('button')
 
 fetch('/pre-req_check/data/all_courses_pre-reqs.csv')
  .then((response) => {
@@ -7,8 +9,8 @@ fetch('/pre-req_check/data/all_courses_pre-reqs.csv')
   })
   .then((csv) => {
     parseCSV(csv);
+    getInput(button);
   });
-
 
 function parseCSV(csv) {
   const arrayOfRows = csv.split('\n');
@@ -36,3 +38,9 @@ function parseCSV(csv) {
 
 	// updateDom()
 }
+
+function getInput(button) {
+  button.addEventListener('click', () => {
+    userInput = document.getElementById("entered-course").value;
+  });
+};
