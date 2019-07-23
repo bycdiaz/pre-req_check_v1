@@ -3,7 +3,8 @@ let csvHeader;
 let userInput;
 const button = document.querySelector('button')
 
-fetch('/all_courses_pre-reqs.csv')
+// testing url in fetch()
+fetch('https://bycdiaz.github.io/pre-req_check/all_courses_pre-reqs.csv')
  .then((response) => {
     return response.text();
   })
