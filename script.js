@@ -11,7 +11,11 @@ fetch('https://bycdiaz.github.io/pre-req_check/all_courses_pre-reqs.csv')
   .then((csv) => {
     parseCSV(csv);
     prepInputField(button);
+    // console.log(csvData);
+    
   });
+
+
 
 function parseCSV(csv) {
   const arrayOfRows = csv.split('\n');
@@ -42,8 +46,16 @@ function parseCSV(csv) {
 
 function prepInputField(button) {
   button.addEventListener('click', () => {
-    console.log('click works!');
-    
     userInput = document.getElementById("entered-course").value;
+    console.log(userInput);
+    courseLookup(userInput);
   });
 };
+
+function courseLookup(userInput) {
+  csvData.forEach(function(obj) {
+    if (Object.values(obj).includes(userInput)) {
+      console.log("The course was found!");
+    }
+  });
+}
