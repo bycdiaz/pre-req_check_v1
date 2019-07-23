@@ -3,13 +3,13 @@ let csvHeader;
 let userInput;
 const button = document.querySelector('button')
 
-fetch('/pre-req_check/data/all_courses_pre-reqs.csv')
+fetch('/all_courses_pre-reqs.csv')
  .then((response) => {
     return response.text();
   })
   .then((csv) => {
     parseCSV(csv);
-    getInput(button);
+    prepInputField(button);
   });
 
 function parseCSV(csv) {
@@ -39,8 +39,10 @@ function parseCSV(csv) {
 	// updateDom()
 }
 
-function getInput(button) {
+function prepInputField(button) {
   button.addEventListener('click', () => {
+    console.log('click works!');
+    
     userInput = document.getElementById("entered-course").value;
   });
 };
