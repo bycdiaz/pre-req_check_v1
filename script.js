@@ -11,8 +11,7 @@ fetch('https://bycdiaz.github.io/pre-req_check/all_courses_pre-reqs.csv')
   .then((csv) => {
     parseCSV(csv);
     prepInputField(button);
-    // console.log(csvData);
-    
+    // console.log(csvData[30]);
   });
 
 
@@ -54,8 +53,16 @@ function prepInputField(button) {
 
 function courseLookup(userInput) {
   csvData.forEach(function(obj) {
-    if (Object.values(obj).includes(userInput)) {
-      console.log("The course was found!");
+    if (obj['Cat Course'] === userInput) {
+      console.log(`${obj['Cat Course']} was found in the data! And it looks like ${obj['Cat Preq Course']} is a pre-req for it.`);
     }
   });
 }
+
+// function courseLookup(userInput) {
+//   csvData.forEach(function(obj) {
+//     if (obj['Cat Course'] === userInput) {
+//       console.log("The course was found!");
+//     }
+//   });
+// }
