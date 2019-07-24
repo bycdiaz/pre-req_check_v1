@@ -46,7 +46,7 @@ function parseCSV(csv) {
 function prepInputField(button) {
   button.addEventListener('click', () => {
     userInput = document.getElementById("entered-course").value;
-    console.log(userInput);
+    console.log(`The user entered ${userInput}`);
     courseLookup(userInput);
   });
 };
@@ -54,7 +54,7 @@ function prepInputField(button) {
 function courseLookup(userInput) {
   csvData.forEach(function(obj) {
     if (obj['Cat Course'] === userInput) {
-      console.log(`${obj['Cat Course']} was found in the data! And it looks like ${obj['Cat Preq Course']} is a pre-req for it.`);
+      console.log(`${obj['Cat Course']} was found in the data! And it looks like ${obj['Cat Preq Course']} with a grade of ${obj['Cat Preq Min Grde']} or better is a pre-req for ${obj['Cat Course']}.`);
     }
   });
 }
