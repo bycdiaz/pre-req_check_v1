@@ -61,12 +61,13 @@ function parseCSV(csv) {
 	csvHeader = header;
   csvData = jsonData;
 
+  // using findResult for troubleshooting.
   let findResult = csvData.findIndex((row) => {
-    return row["Cat Course"] === "BMES 102";
+    return row["Cat Course"] === "BMES 302";
   });
   
   console.log(findResult);
-  console.log(arrayOfRows[1148]);
+  console.log(arrayOfRows[findResult + 1]);
   
   
 
