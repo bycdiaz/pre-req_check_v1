@@ -15,4 +15,3 @@ Current issues:
 * Returns generic message if course does not have pre-requisite.
 * Does not address **and**, **or**, and **co-requisite** situations.
 * Does not display courses that entered coruse is a pre-req for.
-*
