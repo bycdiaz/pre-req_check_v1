@@ -1,7 +1,28 @@
 let csvData;
 let csvHeader;
 let userInput;
+let collegeNames = {
+  "0": "No College Designated",
+  "A": "Antoinette Westphal College of Media Arts & Design",
+  "AS": "College of Arts and Sciences",
+  "B": "Bennett S. LeBow College of Business",
+  "C": "Close School of Entrepreneurship",
+  "CH": "Center for Food & Hospitality Managements",
+  "CI": "College of Computing & Informatics",
+  "CV": "Center for Civic Engagement",
+  "E": "College of Engineering",
+  "GC": "Goodwin College of Professional Studies",
+  "GD": "Graduate College",
+  "NH": "College of Nursing and Health Professions",
+  "PE":"Pennoni Honors College",
+  "PH": "Dornsife School of Public Health",
+  "QQ": "COM School Biomedical Science & Professional Studies",
+  "R": "School of Biomedical Engineering, Science and Health Systems",
+  "T": "School of Education",
+  "X": "Miscellaneous"
+}
 const button = document.querySelector('button')
+
 
 // testing url in fetch()
 fetch('https://bycdiaz.github.io/pre-req_check/all_courses_pre-reqs _no_duplicates.csv')
@@ -39,6 +60,15 @@ function parseCSV(csv) {
 
 	csvHeader = header;
   csvData = jsonData;
+
+  let findResult = csvData.findIndex((row) => {
+    return row["Cat Course"] === "BMES 102";
+  });
+  
+  console.log(findResult);
+  console.log(arrayOfRows[1148]);
+  
+  
 
 	// updateDom()
 }
