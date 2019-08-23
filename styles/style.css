@@ -21,6 +21,13 @@
   height: 200px;
 }
 
+#dragon {
+  height: 700px;
+  float: left;
+  z-index: -1;
+  opacity: 0.2;
+}
+
 
 #title {
   grid-area: title;
