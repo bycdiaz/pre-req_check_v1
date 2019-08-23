@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'futuraBoldCondensed';
+  src: url(styles/fonts/FuturaCondensedBold.otf);
+}
+
+.container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 20% auto auto 20%;
+  grid-template-rows: auto auto auto auto;
+  justify-items: center;
+  grid-template-areas: 
+    ". title title."
+    ". description description."
+    ". input input.";
+  
+}
+
+#title {
+  grid-area: title;
+}
+
+.input {
+  grid-area: input;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#description {
+  grid-area: description;
+}
+
+h1 {
+  font-family: 'futuraBoldCondensed', arial, sans-serif;
+}
