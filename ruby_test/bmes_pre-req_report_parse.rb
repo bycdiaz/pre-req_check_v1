@@ -11,7 +11,7 @@ def pre_req_check(desired_course)
   post_reqs = []
 
   # loops through each row of csv file.
-  CSV.foreach("all_courses_pre-reqs.csv") do |row|
+  CSV.foreach("bmes_pre-req_report.csv") do |row|
     # Check for desired_course pre-reqs
     if desired_course == row[2]
       row[20].start_with?('This') ? pre_reqs << row[20] : pre_reqs << "#{row[20]} is a pre-req for #{row[2]}."

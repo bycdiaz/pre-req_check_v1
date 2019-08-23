@@ -33,6 +33,7 @@ fetch('https://bycdiaz.github.io/pre-req_check/all_courses_pre-reqs _no_duplicat
     parseCSV(csv);
     prepInputField(button);
     // console.log(csvData[30]);
+    
   });
 
 
@@ -62,16 +63,27 @@ function parseCSV(csv) {
   csvData = jsonData;
 
   // using findResult for troubleshooting.
-  let findResult = csvData.findIndex((row) => {
-    return row["Cat Course"] === "BMES 302";
-  });
+  // let findResult = csvData.findIndex((row) => {
+  //   return row["Cat Course"] === "BMES 302";
+  // });
   
-  console.log(findResult);
-  console.log(arrayOfRows[findResult + 1]);
+  // console.log(findResult);
+  // console.log(arrayOfRows[findResult + 1]);
   
+  // creates individual course objects, e.g. MATH 122 = {}
+  const courses = csvData.map((courseInfo) => {
+    if (courseInfo['Cat Course'] != '') {
+      console.log(courseInfo);
+      let this[courseInfo['Cat Course']] = {};
+      for (let i = 0; i < courseInfo.length; i++) {
+        
+        course[header[i]] = courseInfo[i];
+      }
+    }
+  })
+  // updateDom()
+  console.log(courses);
   
-
-	// updateDom()
 }
 
 function prepInputField(button) {
@@ -89,11 +101,3 @@ function courseLookup(userInput) {
     }
   });
 }
-
-// function courseLookup(userInput) {
-//   csvData.forEach(function(obj) {
-//     if (obj['Cat Course'] === userInput) {
-//       console.log("The course was found!");
-//     }
-//   });
-// }
