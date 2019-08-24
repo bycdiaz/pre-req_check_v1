@@ -37,7 +37,64 @@
   grid-area: input;
   display: inline-flex;
   flex-direction: column;
+  position:relative; 
+  width: 200px;
+  /* margin-bottom:45px;  */
 }
+/* Text Field Customization Start =========== */
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:198px;
+  border:none;
+  border-bottom:1px solid #07294D;
+}
+input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+label          {
+  color:#006699; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label     {
+  top:-20px;
+  font-size:14px;
+  color:#07294D;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#07294D; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:21%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* Text Field Customization End =========== */
 
 #description {
   grid-area: description;
@@ -49,8 +106,13 @@ h1 {
   font-size: 36px;
 }
 
-p { 
+p  { 
   font-family: Arial;
   color: #000000;
   font-size: 1.1em;
+}
+
+label { 
+  font-family: Arial;
+  color: #006699;
 }
