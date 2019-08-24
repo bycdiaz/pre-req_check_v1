@@ -61,7 +61,7 @@ input:focus     { outline:none; }
 
 /* LABEL ======================================= */
 label          {
-  color:#006699; 
+  color:#333333; 
   font-size:18px;
   font-weight:normal;
   position:absolute;
@@ -75,7 +75,7 @@ label          {
 input:focus ~ label, input:valid ~ label     {
   top:-20px;
   font-size:14px;
-  color:#07294D;
+  color:#A7A8AA;
 }
 
 /* BOTTOM BARS ================================= */
@@ -121,7 +121,7 @@ p  {
 
 label { 
   font-family: Arial;
-  color: #006699;
+  color: #333333;
 }
 
 #submit {
