@@ -56,6 +56,7 @@ input         {
   width:183px;
   border:none;
   border-bottom:1px solid #07294D;
+  font-family: Arial, sans-serif;
 }
 input:focus     { outline:none; }
 
@@ -114,13 +115,13 @@ h1 {
 }
 
 p  { 
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   color: #000000;
   font-size: 1.1em;
 }
 
 label { 
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   color: #333333;
 }
 
