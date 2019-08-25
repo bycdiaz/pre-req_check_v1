@@ -13,7 +13,8 @@
     ". image image ."
     ". title title."
     ". description description ."
-    ". input input.";
+    ". input input."
+    ". output output .";
   
 }
 #image {
@@ -137,4 +138,27 @@ label {
   vertical-align: top;
   width: auto;
   
+}
+
+#output {
+  grid-area: output;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.outputarea {
+  margin: 50px;
+}
+h2 {
+  font-family: futuraBoldCondensed, arial, sans-serif;
+  color: #07294D;
+  size: 1.6em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: Arial;
+  color: #000000;
+  size: 14px;
+  font-style: italic;
 }
