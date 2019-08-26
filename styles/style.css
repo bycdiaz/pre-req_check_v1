@@ -58,6 +58,7 @@ input         {
   border:none;
   border-bottom:1px solid #07294D;
   font-family: Arial, sans-serif;
+  
 }
 input:focus     { outline:none; }
 
@@ -119,6 +120,8 @@ p  {
   font-family: Arial, sans-serif;
   color: #000000;
   font-size: 1.1em;
+  margin-bottom: 50px;
+  line-height: 1.5em;
 }
 
 label { 
@@ -137,7 +140,7 @@ label {
   text-shadow: white 0 1px 1px;
   vertical-align: top;
   width: auto;
-  
+  margin-top: 15px;
 }
 
 #output {
