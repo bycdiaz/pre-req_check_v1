@@ -41,7 +41,7 @@ function collectCourse() {
       let prereq = document.querySelector('#prereq');
       let prereqOutput = document.createElement('p');
       prereq.appendChild(prereqOutput);
-      prereqOutput.textContent = `BIO 122 and ENGR 232, or MATH 262 or MATH 210 must be taken before ${enteredCourse}.`;
+      prereqOutput.textContent = `BIO 122 and one of the following must be taken before ${enteredCourse}: ENGR 232, or MATH 262 or MATH 210.`;
 
       // co-req
       let coreq = document.querySelector('#coreq');
